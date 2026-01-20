@@ -4,18 +4,20 @@ plugins {
 }
 
 android {
-    namespace = "ro.pub.cs.systems.eim.practicaltest02v4"
+    namespace = "ro.pub.cs.systems.eim.colocviu2"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "ro.pub.cs.systems.eim.practicaltest02v4"
-        minSdk = 29
+        applicationId = "ro.pub.cs.systems.eim.colocviu2"
+        minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    useLibrary("org.apache.http.legacy")
 
     buildTypes {
         release {
@@ -42,6 +44,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    implementation("cz.msebera.android:httpclient:4.4.1.2")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
